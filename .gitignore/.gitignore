@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formularios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="./css/3_formulario.css">
+</head>
+    
+<body>
+  <h1>Formularios</h1>
+  <form class="ContactForm">
+    <legend>Envíanos tus comentarios</legend>
+    <input type="text" name="nombre" placeholder="Escribe tu nombre" title="tu nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+    <input type="email" name="email" placeholder="Escribe tu email" title="tu email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+    <input type="text" name="asunto" title="asunto a tratar" placeholder="Asunto a tratar" required>
+    <textarea name="comentarios" title="tus comentarios" placeholder="Escribe tus comentarios" cols="50" rows="5" required></textarea>
+    <input type="submit" value="Enviar">
+    <div class="ContactForm-preload  u-hidden">
+      <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+    </div>
+    <div class="ContactForm-message  u-hidden">
+      <p>Tu información ha sido enviada con éxito</p>
+    </div>
+  </form>
+  <script src="./js/3_formulario.js"></script>
+    
+     <title>Reloj, Andres</title>
+
+    <script language="JavaScript">
+    function inicioTiempo(){
+    puntoActual = new Date()
+    ho = puntoActual.getHours()
+    min = puntoActual.getMinutes()
+    seg = puntoActual.getSeconds()
+
+
+    str_ho = new String (ho)
+    if (str_ho.length == 1)
+    ho = "0" + ho
+
+
+    str_min = new String (min)
+    if (str_min.length == 1)
+    min = "0" + min
+    
+    str_seg = new String (seg)
+    if (str_seg.length == 1)
+    seg = "0" + seg
+    
+   
+    hoSalida = ho + " : " + min + " : " + seg
+    
+    document.form_tiempo.tiempo.value = hoSalida
+    
+    setTimeout("inicioTiempo()",1000)
+    }
+    </script>
+    
+    
+    <body onload="inicioTiempo()">
+    
+    <center>
+        <br>
+        <br>
+     
+
+    <form name="form_tiempo">
+    <input type="text" name="tiempo" style="background-color : font-family  Arial,
+     Helvetica; font-size : 60pt; text-align : center;" >
+    
+        </form>
+        </center>
+    
+    
+    </body>
+</body>
+</html>
